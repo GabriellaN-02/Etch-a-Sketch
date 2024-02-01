@@ -1,15 +1,22 @@
 const gridContainer = document.querySelector("#gridContainer");
 
-// Object.assign(column.style, { border: "1px solid black", backgroundColor: "yellow", gridTemplateColumns: "16", gridTemplateRows: "16" });
-// gridContainer.appendChild(column);
+const gridTitle = document.querySelector("#gridTitle"); //h3
+let gridNumber = document.createElement("span"); // new element to store the value of the range
+const gridRange = document.querySelector("#gridRange"); // references to the input range
 
-gridContainer.style.gridTemplateColumns = 16;
-gridContainer.style.gridTemplateRows = 16;
+// gridNumber.textContent = gridRange.value;
+// gridTitle.appendChild(gridNumber);
 
-for (let row = 1; row <= 16; row++) {
-  for (let col = 1; col <= 16; col++) {
+// default 8x8 rows
+for (let row = 1; row <= 8; row++) {
+  for (let col = 1; col <= 8; col++) {
     const column = document.createElement("div");
     Object.assign(column.style, { border: "1px solid black", backgroundColor: "yellow", gridColumn: `${col} / span 1`, gridRow: `${row} / span 1` });
     gridContainer.appendChild(column);
   }
 }
+
+gridRange.addEventListener("input", () => {
+  gridNumber.textContent = gridRange.value;
+  gridTitle.appendChild(gridNumber);
+});

@@ -18,14 +18,14 @@
     </header>
 
     <main class="lg:flex">
-      <section id="gridContainer" class="bg-red-300 my-[5%] w-[75vw] h-[50vh] max-w-md mx-auto grid"></section>
+      <section id="gridContainer" class="bg-red-300 my-[5%] w-[70vw] h-[50vh] max-w-2xl max-h-96 mx-auto grid"></section>
       <section class="flex justify-between order-first bg-red-400 w-[75vw] max-w-md mx-auto">
         <!-- change color & grid size -->
         <div class="bg-blue-400">
           <h3>Change Color</h3>
           <input type="color" name="" id="" />
-          <h3>Select grid size</h3>
-          <input type="range" name="" id="" />
+          <label id="gridTitle" for="grid">Select grid size:</label>
+          <input id="gridRange" type="range" name="grid" id="grid" min="8" max="64" value="8" />
         </div>
         <!-- brush mode, rainbow mode, eraser, clear board -->
         <div class="bg-blue-400">
