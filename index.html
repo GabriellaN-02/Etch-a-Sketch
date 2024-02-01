@@ -13,17 +13,27 @@
     </style>
   </head>
   <body class="py-5 bg-green-500 h-screen">
-    <header class="bg-blue-100 mb-3">
+    <header class="bg-blue-100">
       <h1 class="text-center text-xl">Etch a Sketch</h1>
     </header>
 
     <main class="lg:flex">
-      <section id="gridContainer" class="bg-red-300 w-[75vw] h-[50vh] max-w-md mx-auto"></section>
-      <section class="flex justify-evenly order-first">
+      <section id="gridContainer" class="bg-red-300 my-[5%] w-[75vw] h-[50vh] max-w-md mx-auto"></section>
+      <section class="flex justify-between order-first bg-red-400 w-[75vw] max-w-md mx-auto">
         <!-- change color & grid size -->
-        <div class="w-10 h-10 bg-blue-400"></div>
+        <div class="bg-blue-400">
+          <h3>Change Color</h3>
+          <input type="color" name="" id="" />
+          <h3>Select grid size</h3>
+          <input type="range" name="" id="" />
+        </div>
         <!-- brush mode, rainbow mode, eraser, clear board -->
-        <div class="w-10 h-10 bg-blue-400"></div>
+        <div class="bg-blue-400">
+          <button class="border bg-yellow-100">Brush mode</button>
+          <button class="border bg-yellow-100">Rainbow mode</button>
+          <button class="border bg-yellow-100">Eraser</button>
+          <button class="border bg-yellow-100">Clear board</button>
+        </div>
       </section>
     </main>
   </body>
