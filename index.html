@@ -7,33 +7,53 @@
     <script src="etch-a-sketch.js" defer></script>
     <title>Etch a Sketch</title>
     <style>
+      :root {
+        --cerulian: #046e8f;
+        --pacific: #0c0a3e;
+      }
       * {
-        font-family: cursive;
+        color: whitesmoke;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      body {
+        background-color: var(--cerulian);
+      }
+      .pacific {
+        background-color: var(--pacific);
+        padding: 1px;
+        border-radius: 200px;
+      }
+      .pacific:hover {
+        background-color: rgb(97, 5, 151);
       }
     </style>
   </head>
-  <body class="py-5 bg-green-500 h-screen">
-    <header class="bg-blue-100">
-      <h1 class="text-center text-2xl">Etch a Sketch</h1>
+  <body class="py-5 h-screen">
+    <header>
+      <h1 class="text-center text-2xl font-bold">Etch a Sketch</h1>
     </header>
 
     <main class="lg:flex">
-      <section id="gridContainer" class="bg-white my-[5%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] mx-auto grid"></section>
+      <section id="gridContainer" class="bg-white border-2 border-black rounded-md my-[5%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] mx-auto grid lg:my-[2.5%]"></section>
       <section class="order-first">
         <!-- change color & grid size -->
-        <div class="bg-blue-500 w-fit mx-auto">
-          <h3>Change Color:</h3>
-          <input type="color" name="" id="" class="rounded w-12 h-12 p-0 bg-white" />
-          <h3 id="gridTitle" for="grid">Select grid size:</h3>
-          <input id="gridRange" type="range" name="grid" id="grid" min="8" max="64" value="8" />
-        </div>
+        <div class="w-fit mx-auto">
+          <div class="w-fit text-center mx-auto">
+            <h3 class="font-semibold">Change Color:</h3>
+            <div class="w-fit mx-auto my-1">
+              <input type="color" name="" id="" class="rounded w-12 h-12 bg-white" />
+            </div>
 
-        <!-- brush mode, rainbow mode, eraser, clear board -->
-        <div>
-          <button class="border bg-yellow-100">Brush mode</button>
-          <button class="border bg-yellow-100">Rainbow mode</button>
-          <button class="border bg-yellow-100">Eraser</button>
-          <button class="border bg-yellow-100">Clear board</button>
+            <h3 id="gridTitle" class="font-semibold" for="grid">Select grid size:</h3>
+            <input id="gridRange" type="range" name="grid" id="grid" min="8" max="64" value="8" />
+          </div>
+
+          <div class="flex flex-col gap-3 mt-1">
+            <button class="pacific">Brush mode</button>
+            <button class="pacific">Rainbow mode</button>
+            <button class="pacific">Eraser</button>
+            <button class="pacific">Clear board</button>
+          </div>
         </div>
       </section>
     </main>
