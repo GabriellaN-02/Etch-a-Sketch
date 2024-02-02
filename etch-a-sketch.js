@@ -6,6 +6,7 @@ const gridRange = document.querySelector("#gridRange"); // references to the inp
 
 //default 8 value of grid size in range
 gridNumber.textContent = `${gridRange.value}x${gridRange.value}`;
+gridNumber.style.color = "#121212";
 gridTitle.appendChild(gridNumber);
 
 //default 8*8 grids
@@ -23,6 +24,7 @@ for (let row = 1; row <= 8; row++) {
 // Event listener: 1. Dynamic range value 2. Dynamic grid items
 gridRange.addEventListener("input", () => {
   gridNumber.textContent = `${gridRange.value}x${gridRange.value}`;
+  gridNumber.style.color = "#121212";
   gridTitle.appendChild(gridNumber);
 
   gridContainer.textContent = "";
