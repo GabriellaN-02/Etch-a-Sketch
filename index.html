@@ -7,28 +7,29 @@
     <script src="etch-a-sketch.js" defer></script>
     <title>Etch a Sketch</title>
     <style>
-      h1 {
+      * {
         font-family: cursive;
       }
     </style>
   </head>
   <body class="py-5 bg-green-500 h-screen">
     <header class="bg-blue-100">
-      <h1 class="text-center text-xl">Etch a Sketch</h1>
+      <h1 class="text-center text-2xl">Etch a Sketch</h1>
     </header>
 
     <main class="lg:flex">
       <section id="gridContainer" class="bg-white my-[5%] w-[300px] h-[300px] md:w-[500px] md:h-[500px] mx-auto grid"></section>
-      <section class="flex justify-between order-first bg-red-400 w-[75vw] max-w-md mx-auto">
+      <section class="order-first">
         <!-- change color & grid size -->
-        <div class="bg-blue-400">
-          <h3>Change Color</h3>
-          <input type="color" name="" id="" />
-          <label id="gridTitle" for="grid">Select grid size:</label>
+        <div class="bg-blue-500 w-fit mx-auto">
+          <h3>Change Color:</h3>
+          <input type="color" name="" id="" class="rounded w-12 h-12 p-0 bg-white" />
+          <h3 id="gridTitle" for="grid">Select grid size:</h3>
           <input id="gridRange" type="range" name="grid" id="grid" min="8" max="64" value="8" />
         </div>
+
         <!-- brush mode, rainbow mode, eraser, clear board -->
-        <div class="bg-blue-400">
+        <div>
           <button class="border bg-yellow-100">Brush mode</button>
           <button class="border bg-yellow-100">Rainbow mode</button>
           <button class="border bg-yellow-100">Eraser</button>

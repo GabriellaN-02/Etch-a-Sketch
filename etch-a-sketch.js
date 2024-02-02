@@ -5,7 +5,7 @@ let gridNumber = document.createElement("span"); // new element to store the val
 const gridRange = document.querySelector("#gridRange"); // references to the input range
 
 //default 8 value of grid size in range
-gridNumber.textContent = gridRange.value;
+gridNumber.textContent = `${gridRange.value}x${gridRange.value}`;
 gridTitle.appendChild(gridNumber);
 
 //default 8*8 grids
@@ -22,7 +22,7 @@ for (let row = 1; row <= 8; row++) {
 
 // Event listener: 1. Dynamic range value 2. Dynamic grid items
 gridRange.addEventListener("input", () => {
-  gridNumber.textContent = gridRange.value;
+  gridNumber.textContent = `${gridRange.value}x${gridRange.value}`;
   gridTitle.appendChild(gridNumber);
 
   gridContainer.textContent = "";
